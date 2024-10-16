@@ -9,14 +9,21 @@ function addItem() {
 
     let nuevoElemento = document.createElement("li");
     let nuevoBoton = document.createElement("button");
+    let nuevoBoton2 = document.createElement("button");
     nuevoBoton.textContent = "BORRAR";
+    nuevoBoton2.textContent = "COMPLETADO"
 
     nuevoBoton.addEventListener("click", function() {
         borrar(nuevoElemento);
     });
 
-    nuevoElemento.textContent = nuevoText + " "; 
+    nuevoBoton2.addEventListener("click", function(){
+        completado(nuevoElemento);
+    })
+
+    nuevoElemento.textContent = " " +  nuevoText + " "; 
     nuevoElemento.appendChild(nuevoBoton);
+    nuevoElemento.appendChild(nuevoBoton2);
 
     document.getElementById("itemsList").appendChild(nuevoElemento);
     nuevoItem.value = "";
@@ -28,4 +35,8 @@ document.getElementById("addItemBtn").addEventListener("click", function() {
 
 function borrar(elemento) {
     elemento.remove(); 
+}
+
+function completado(elemento) {
+    elemento.style.color = "red";
 }

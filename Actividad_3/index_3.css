@@ -83,3 +83,9 @@ body {
     .deleteBtn {
     order: 3;
     }
+
+    #addItemBtn:hover {
+        color: green;
+        background-color: grey;
+        font-style: italic;
+    }
