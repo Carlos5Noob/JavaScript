@@ -19,6 +19,7 @@ function addItem() {
 
     nuevoBoton2.addEventListener("click", function(){
         completado(nuevoElemento);
+        nuevoBoton2.remove();
     })
 
     nuevoElemento.textContent = " " +  nuevoText + " "; 
@@ -38,5 +39,5 @@ function borrar(elemento) {
 }
 
 function completado(elemento) {
-    elemento.style.color = "red";
+    elemento.style.color = "green";
 }
