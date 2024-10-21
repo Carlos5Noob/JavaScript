@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    
+    <div onmouseover="cambiaColor('green')" onmouseout="cambiaColor('white')">Pasa por aquí</div>
+    <div id="efecto">Efectos del movimiento</div>
+
+    <script>
+        function cambiaColor(color) {
+            document.getElementById("efecto").style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+
+    <form>
+        <input id="precio" type="number">
+        <input id="cantidad" type="number">
+        <input onclick="multi()" type="button" id="enviar" value="Calcular">
+        <input id="total" readonly>
+    </form>
+
+
+    <script>
+        function multi() {
+            num1 = document.getElementById("precio").value;
+            num2 = document.getElementById("cantidad").value;
+            document.getElementById("total").value = num1 * num2;
+        }
+    </script>
+
+
+</body>
+
+</html>
