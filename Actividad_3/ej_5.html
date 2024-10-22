@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <style> 
+        .boton{display:block; width:100px;cursor:pointer;margin: 10px;border:1px solid black} 
+    </style>  
+</head>
+<body>
+    
+    <div onclick="pulsar(this.id)" id="boton1" class="boton">Pulsar aquí</div> 
+    <div onclick="pulsar(this.id)" id="boton2" class="boton">Pulsar aquí</div> 
+     
+
+    <script>
+        function pulsar(id) {
+            alert("Has pulsado el botón con id " + id); 
+        }
+    </script>
+</body>
+</html>

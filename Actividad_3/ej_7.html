@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="c1" style="background: red"></div>
+    <div id="c2" style="background: white"></div>
+    <div id="c3" style="background: blue"></div>
+
+    <script>
+        // Obtener los bloques
+        const blockRed = document.getElementById('c1');
+        const blockWhite = document.getElementById('c2');
+        const blockBlue = document.getElementById('c3');
+
+        // Variable para almacenar el color anterior
+        let lastColor = 'white';
+
+        // Cambia el color del bloque central al entrar desde el rojo
+        blockRed.addEventListener('mouseleave', function(event) {
+            lastColor = 'red'; // Guardamos el color del bloque rojo
+        });
+
+        // Cambia el color del bloque central al entrar desde el azul
+        blockBlue.addEventListener('mouseleave', function(event) {
+            lastColor = 'blue'; // Guardamos el color del bloque azul
+        });
+
+        // Cambia el color del bloque central dependiendo del bloque de origen
+        blockWhite.addEventListener('mouseenter', function(event) {
+            blockWhite.style.background = lastColor; // Asigna el color guardado al bloque central
+        });
+
+        // Al salir del bloque central, vuelve a blanco si el ratón no proviene de los otros bloques
+        blockWhite.addEventListener('mouseleave', function(event) {
+            blockWhite.style.background = 'white'; // Resetea el color a blanco
+        });
+    </script>
+
+</body>
+
+</html>

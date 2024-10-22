@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+    <style>
+        .oculto {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="oculto" id="ficha1">
+        Hola, soy el bloque 1</div>
+    <div class="oculto" id="ficha2">
+        Hola, soy el bloque 2</div>
+    <div class="oculto" id="ficha3">
+        Hola, soy el bloque 3</div>
+
+        <script>
+            document.addEventListener("keypress", function(event){
+                if(event.key == "1") {
+                    document.getElementById("ficha1").classList = "visible";
+                    document.getElementById("ficha2").classList = "oculto";
+                    document.getElementById("ficha3").classList = "oculto";
+                } else if(event.key == "2") {
+                    document.getElementById("ficha2").classList = "visible";
+                    document.getElementById("ficha3").classList = "oculto";
+                    document.getElementById("ficha1").classList = "oculto";
+                } else if (event.key == "3") {
+                    document.getElementById("ficha3").classList = "visible";
+                    document.getElementById("ficha2").classList = "oculto";
+                    document.getElementById("ficha1").classList = "oculto";
+                }
+            })
+        </script>
+
+</body>
+
+</html>
