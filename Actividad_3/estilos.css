@@ -1,0 +1,9 @@
+.oculto {
+    background-color: aqua;
+    border: 2px burlywood solid;
+}
+
+.visible {
+    background-color: aqua;
+    border: 2px burlywood solid;
+}
