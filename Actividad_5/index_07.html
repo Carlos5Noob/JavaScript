@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7 Arrays</title>
+</head>
+<body>
+    
+    <script>
+
+        let vocales = ['a','e','i','o','u']
+
+        function esVocal(caracter) {
+
+            for (let i = 0; i < vocales.length; i++) {
+                if (caracter === vocales[i]) {
+                    return true; 
+                }      
+            }
+            return false; 
+        }
+
+        console.log(esVocal('e'));
+        console.log(esVocal('t'));
+
+    </script>
+
+</body>
+</html>

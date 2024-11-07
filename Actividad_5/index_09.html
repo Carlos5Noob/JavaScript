@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9 Arrays</title>
+</head>
+<body>
+    
+    <script>
+        let empleados = ["María", "Luis", "Antonia", "Pedro", "Marisa"];
+
+        function servicio(dia) {
+            let nombre;
+            switch (dia) {
+                case "lunes":
+                case "Lunes":
+                case "LUNES":
+                    nombre = empleados[0];
+                    break;
+                case "martes":
+                case "Martes":
+                case "MARTES":
+                    nombre = empleados[1];
+                    break;
+                case "Miercoles":
+                case "Miércoles":
+                case "miercoles":
+                case "MIERCOLES":
+                    nombre = empleados[2];
+                    break;
+                case "jueves":
+                case "Jueves":
+                case "JUEVES":
+                    nombre = empleados[3];
+                    break;
+                case "viernes":
+                case "Viernes":
+                case "VIERNES": 
+                    nombre = empleados[4];
+                    break;
+                default:
+                    console.log("No hay servicio para este día");
+        }
+        console.log("Este día se encarga " + nombre);
+    }
+
+    servicio("Jueves");
+    servicio("MIERCOLES");
+    servicio("Sabado");
+
+    </script>
+
+</body>
+</html>

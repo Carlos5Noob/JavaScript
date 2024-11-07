@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 Arrays</title>
+</head>
+<body>
+
+    <script>
+        function existeEn(caracter, cadena) {
+            for (let i = 0; i < cadena.length; i++) {
+                if (caracter === cadena[i]) {
+                    return true;
+                }         
+            }
+            return false;
+        }
+
+        let cadena = ['h', 'j', 'a', 't', 'e'];
+
+        console.log(existeEn('a', cadena));
+
+    </script>
+
+</body>
+</html>
