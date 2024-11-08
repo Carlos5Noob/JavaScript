@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 Objetos</title>
+</head>
+<body>
+    
+        <script>
+            function calcularSalario(obj) {
+                let suma = 0;
+                for (let key in obj) {
+                        suma += obj[key];
+                    }
+
+                    return suma;
+                }
+        
+
+            let salarios = {
+                "John": 100,
+                "Ann": 160,
+                "Pete": 130
+            }
+
+            alert(calcularSalario(salarios));
+
+        </script>
+
+</body>
+</html>
