@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    
+    <form id="formulario" action="grabar.php" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre">
+        <label for="contra">Contraseña</label>
+        <input type="password" id="contra" name="contra">
+        <label for="poblacion">Población</label>
+        <select name="poblacion" id="poblacion">
+            <option value="">-Seleccione-</option>
+            <option value="jerez">Jerez de la Frontera</option>
+            <option value="tarifa">Tarifa</option>
+            <option value="chiclana">Chiclana de la Frontera</option>
+            <option value="alcala">Alcalá de los Gazules</option>   
+            <option value="olvera">Olvera</option>
+        </select>
+        <button type="submit">Crear cuenta</button>
+    </form>
+
+    <script>
+      
+        function validaNombre(nombre) {
+            return /^(\s*\S+.*){8,}$/.test(nombre);
+        }
+
+    
+        function validaContraseña(contraseña) {
+            return /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,10}$/.test(contraseña);
+        }
+
+     
+        function validaPoblacion(poblacion) {
+            return poblacion.value !== "";
+        }
+
+     
+        document.getElementById("formulario").addEventListener("submit", function(event){
+            let nombre = document.getElementById("nombre").value.trim();
+            let contra = document.getElementById("contra").value.trim();
+            let poblacion = document.getElementById('poblacion')
+
+          
+            if (!validaNombre(nombre)) {
+                alert("El nombre ha de tener al menos 8 caracteres.");
+                event.preventDefault();
+            } else if (!validaContraseña(contra)) {
+                alert("La contraseña debe tener entre 6 y 10 caracteres, incluir al menos un número y una letra mayúscula.");
+                event.preventDefault(); 
+            } else if (!validaPoblacion(poblacion)) {
+                alert("Debes seleccionar una población.");
+                event.preventDefault(); 
+            }
+      
+        });
+
+    </script>
+
+</body>
+</html>
